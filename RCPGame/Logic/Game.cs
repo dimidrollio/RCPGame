@@ -1,11 +1,10 @@
-﻿using RCPGame.Models;
-
+﻿
 namespace RCPGame.Logic
 {
 	public class Game
 	{
-		private IPlayer _firstPlayer;
-		private IPlayer _secondPlayer;
+		private readonly IPlayer _firstPlayer;
+		private readonly IPlayer _secondPlayer;
 
 		public Game(IPlayer firstPlayer, IPlayer secondPlayer) 
 		{
@@ -15,10 +14,9 @@ namespace RCPGame.Logic
 
 		public IPlayer? ChooseWinner()
 		{
-			var firstPlayerChoice = _firstPlayer.MakeChoice();
-			var secondPlayerChoice = _secondPlayer.MakeChoice();
-
-
+			var firstPlayerChoice = _firstPlayer.Choice;
+			var secondPlayerChoice = _secondPlayer.Choice;
+			//if not null
 			if(firstPlayerChoice != null && secondPlayerChoice != null)
 			{
 
@@ -49,7 +47,7 @@ namespace RCPGame.Logic
 						else return _firstPlayer;
 					}
 					//if first player chooses scissors
-					if (firstPlayerChoice == PossibleChoice.Choice_Scissors)
+					else
 					{
 						if (secondPlayerChoice == PossibleChoice.Choice_Rock)
 						{
@@ -58,6 +56,10 @@ namespace RCPGame.Logic
 						else return _firstPlayer;
 					}
 				}
+			}
+			else
+			{
+				throw new NotImplementedException();
 			}
 		}
 	}
