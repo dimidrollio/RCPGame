@@ -2,6 +2,6 @@
 {
 	public interface IPlayer
 	{
-		public string MakeChoice();
+		string Choice { get; set; }
 	}
 }
