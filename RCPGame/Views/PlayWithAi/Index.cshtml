@@ -1,7 +1,7 @@
 ﻿@model PlayVM
 
 <form method="post" enctype="multipart/form-data">
-	<select asp-items="Model.PossibleChoices" asp-for="FirstPlayerChoice.UserChoice">
+	<select asp-items="Model.PossibleChoices" asp-for="FirstPlayer.Choice">
 		<option disabled selected> -Your Choice- </option>
 	</select>
 	<button type ="submit">Submit your choice</button>

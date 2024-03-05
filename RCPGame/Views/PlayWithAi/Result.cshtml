@@ -1,0 +1,20 @@
+﻿@model PlayVM
+
+<h2>Robot chooses @Model.SecondPlayer.Choice </h2>
+@if (Model.Winner == null)
+{
+	<h2>Draw!!!</h2>
+}
+
+else if (@Model.SecondPlayer.Choice == @Model.Winner.Choice.ToString())
+{
+	<h2>You lost...</h2>
+}
+
+else
+{
+	<h2>You won!</h2>
+}
+
+
+<a asp-controller="home" asp-action="index">Click to play again</a>
