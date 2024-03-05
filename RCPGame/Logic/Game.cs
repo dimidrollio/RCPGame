@@ -29,18 +29,18 @@ namespace RCPGame.Logic
 				else
 				{
 					//if first player chooses rock
-					if (firstPlayerChoice == PossibleChoice.Choice_Rock) 
+					if (firstPlayerChoice == PossibleChoices.Choice_Rock) 
 					{
-						if (secondPlayerChoice == PossibleChoice.Choice_Paper)
+						if (secondPlayerChoice == PossibleChoices.Choice_Paper)
 						{
 							return _secondPlayer;
 						}
 						else return _firstPlayer;
 					}
 					// if first player chooses paper
-					else if (firstPlayerChoice == PossibleChoice.Choice_Paper)
+					else if (firstPlayerChoice == PossibleChoices.Choice_Paper)
 					{
-						if (secondPlayerChoice == PossibleChoice.Choice_Scissors)
+						if (secondPlayerChoice == PossibleChoices.Choice_Scissors)
 						{
 							return _secondPlayer;
 						}
@@ -49,7 +49,7 @@ namespace RCPGame.Logic
 					//if first player chooses scissors
 					else
 					{
-						if (secondPlayerChoice == PossibleChoice.Choice_Rock)
+						if (secondPlayerChoice == PossibleChoices.Choice_Rock)
 						{
 							return _secondPlayer;
 						}
